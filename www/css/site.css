@@ -23,8 +23,8 @@
 {
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url('../img/background.png');repeat
-	background-color: ;
+   /* background-image: url('../img/background.png');repeat*/
+	background-color:#3f4246;
     background-size: 100% 100%;
 }
 
