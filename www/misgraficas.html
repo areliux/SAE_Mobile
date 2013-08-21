@@ -28,6 +28,7 @@
             {
                 padding-top: 60px;
                 background-color: rgb(239, 239, 239);
+                padding-bottom: 60px;
             }
     </style>
 </head>
@@ -82,7 +83,7 @@
             <div class="container">
                 <ul class="nav navbar-nav nav-footer center-align">
                     <li>
-                        <a href="default.html" title="Inicio"><i class="icon-home icon-large"></i></a>
+                        <a href="Default.html" title="Inicio"><i class="icon-home icon-large"></i></a>
                     </li>
                     <li>
                         <a href="misencuestas.html" title="Encuestas"><i class="icon-check icon-large"></i></a>
@@ -205,11 +206,15 @@
                 }]
             });
         });
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            document.addEventListener("backbutton", function (e) {
+                e.preventDefault();
+                navigator.app.exitApp();
+            }, false);
+        }
     </script>
-       <script type="text/javascript" src="cordova-2.3.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
 </body>
 </html>
